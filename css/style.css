@@ -2,3 +2,45 @@ body {
   background-color: #dadada;
   font-size: 10px;
 }
+
+/* Adjusted the h1 font-size in em terms */
+h1 {
+  font-size: 2.5em;
+}
+
+/* Added a selector for div elements to change the background color to black for the boxes.
+Then I changed the font color to white to reflect nicely on the black boxes.
+Thereafter I floated the boxes in center, so I can work from the ground-up (mobile-first)
+in one column basis. Then I added the settings for the margins, width,
+and padding all in % terms, so they can adjust.
+*/
+
+div {
+  background-color: #000000;
+  color: #ffffff;
+  float: center;
+  margin: 1% auto;
+  width: 60%;
+  padding: 0.3% 3%;
+}
+
+/* display for ipad size screens. I took reference as 575 px from the course content.
+I noticed though that the course content dictates a "575px" for a tablet size,
+which however doesn't work well with all ipads, except the iPad mini*/
+
+
+@media screen and (min-width: 575px) {
+  div{
+    float: left;
+    margin: 5% 1.5%;
+    width: 30%;
+    padding: 5% 5%;
+}
+
+@media screen and (min-width: 991px) {
+  div{
+    float: left;
+    margin: 5% 1.5%;
+    width: 20%;
+    padding: 1% 0.5%;
+}
