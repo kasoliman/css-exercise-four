@@ -3,44 +3,100 @@ body {
   font-size: 10px;
 }
 
-/* Adjusted the h1 font-size in em terms */
+/* Having created a "headline" class in the index.html file, I had added
+the needed format settings */
+.headline {
+  padding-top: 5%;
+  padding-left: 0%;
+  padding-bottom: 5%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  /*text-decoration: overline underline; */
+  text-transform: uppercase;
+  width: 100%;
+}
+
+
+
+/* Changing the font-size and type settings for the image headings */
 h1 {
   font-size: 2.5em;
+  color: #000000;
+  text-align: left;
+  padding-top: 5%;
+  padding-left: 5%;
 }
 
-/* Added a selector for div elements to change the background color to black for the boxes.
-Then I changed the font color to white to reflect nicely on the black boxes.
-Thereafter I floated the boxes in center, so I can work from the ground-up (mobile-first)
-in one column basis. Then I added the settings for the margins, width,
-and padding all in % terms, so they can adjust.
-*/
 
-div {
-  background-color: #000000;
-  color: #ffffff;
-  float: center;
-  margin: 1% auto;
-  width: 60%;
-  padding: 0.3% 3%;
+
+/* aligning the "container" in center
+.container {
+  text-align: center;
+  display: inline;
+}*/
+
+
+
+/* adding images and their format settings for each city/location
+Also - I have changed the class names of the cities for better reference
+e.g. changed "preview baku" to "previewbaku"
+e.g. changed "preview lond" to "previewlondon" */
+
+.previewbaku {
+  background-image: url("/images/baku.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 65%;
+  width: 100%;
 }
 
-/* display for ipad size screens. I took reference as 575 px from the course content.
-I noticed though that the course content dictates a "575px" for a tablet size,
-which however doesn't work well with all ipads, except the iPad mini*/
+.previewlondon {
+  background-image: url("/images/london.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 65%;
+  width: 100%;
+}
 
+.previewmadrid {
+  background-image: url("/images/madrid.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 65%;
+  width: 100%;
+}
+
+.previewrome {
+  background-image: url("/images/rome.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 65%;
+  width: 100%;
+}
+
+
+/* modifications depending on screen size */
 
 @media screen and (min-width: 575px) {
-  div{
-    float: left;
-    margin: 5% 1.5%;
-    width: 30%;
-    padding: 5% 5%;
+.previewbaku, .previewlondon, .previewmadrid, .previewrome {
+  display: inline-block;
+  background-size: cover;
+  padding: 15% 15%;
+  width: 15%;
+}
+
+@media screen and (min-width: 575px) {
+  .container {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 991px) {
-  div{
-    float: left;
-    margin: 5% 1.5%;
-    width: 20%;
-    padding: 1% 0.5%;
+  .previewbaku, .previewlondon, .previewmadrid, .previewrome {
+    display: inline-block;
+    background-size: cover;
+    padding: 8% 8%;
+    width: 5%;
+  }
 }
